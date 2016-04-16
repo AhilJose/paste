@@ -5,7 +5,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to QuadPre</title>
+	<title>Welcome to my pastie</title>
 </head>
 <style>
 input[type=text] {
