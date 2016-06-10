@@ -6,8 +6,24 @@ session_start();
 <html>
 <head>
 	<title>Welcome to my pastie</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <style>
+h1 {
+    font-size: 63px !important;
+    font-family: cursive;
+    color: deepskyblue !important;
+}
+.navbar-fixed-bottom {
+    background-color: #607D8B;
+}
+footer {
+    color: #BBB8B8;
+}
 input[type=text] {
     width: 100%;
     height: 150px;
@@ -69,9 +85,25 @@ input[type=submit]:hover {
 		echo $_SESSION['filename'];
 	}
 ?>
+<div class="container-fluid">
+  <div class="jumbotron">
 	<form method=POST action="<?php if($_POST){ header("Location: http://localhost/paste/uploads/$nam.txt");} ?>">
-		<h1>PASTE IT</h1><input type="text" name="paste" placeholder="Paste here...">
+		<h1>PASTE IT</h1><textarea class="form-control" rows="10" name="paste" placeholder="Paste here..."></textarea>
 		<input type="submit" name="mypaste" value="PASTE">
 	</form>
-
+  </div>
+</div>
 </body>
+
+<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  <div class="container">
+    <footer class="container-fluid bg-4 text-center">
+    Copyright &copy; 2015 AKHIL JOSE &hearts; made by AKHIL JOSE.<br>
+                                <span style="font-size:0.6em;">HTML | CSS | JavaScript | Front-End Development</span><br>
+                                <span style="font-size:0.6em;">PHP | Back-End Development</span> 
+    </footer>
+  </div>
+</div>
+
+</html>
+
